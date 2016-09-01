@@ -1,0 +1,142 @@
+@import "bootstrap/bootstrap";
+
+@font-face {
+	font-family: 'MyriadPro-Regular';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+header {
+    background: url(../images/header-bgr.jpg) top center no-repeat;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 4rem;
+    height: 24rem;
+    padding-top: 10.2rem;
+}
+
+main {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0 1.5rem;
+    h1 {
+        font-size: 3rem;
+        font-weight: 100;
+        margin-bottom: 3.125rem;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 1.063rem;
+        text-transform: uppercase;
+    }
+    p {
+        margin-top: 1.563rem;
+        margin-bottom: 3.75rem;
+        color: #7d7d7d;
+    }
+    .project-box {
+        padding: 1.563rem 1.438rem;
+        border: 1px solid #ccc;
+        margin-right: -1px;
+        margin-top: -1px;
+        font-weight: 400;
+        padding-bottom: 3.75rem;
+        time {
+            display: block;
+            font-size: .85rem;
+            color: #00a1e4;
+            margin-bottom: 3.563rem;
+        }
+        p {
+            font-size: .85rem;
+            margin: .6875rem 0;
+        }
+    }
+    .project-box:hover {
+        background-color: #00a1e4;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        & time {
+            color: #fff;
+        }
+        & p {
+            color: #fff;
+        }
+    }
+}
+
+footer {
+    font-family: 'Verdana', sans-serif;
+    margin-top: 4.125rem;
+    background-color: #141b23;
+    padding: 1.188rem 0 1.5rem;
+    color: #999;
+    vertical-align: middle;
+    .container-fluid {
+        @media (min-width:90em) {
+            padding: 0 10% ;
+        }
+    }
+    p {
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 1.5;
+        font-size: .625rem;
+        vertical-align: -webkit-baseline-middle;
+    }
+    a,
+    a:hover {
+        color: #cdcdcd;
+    }
+    img {
+        display: inline-block;
+        margin-right: .2rem;
+        @media (min-width: 60em) {
+            
+        }
+    }
+    .contact {
+        .location {
+            padding-left: 1rem;
+            background: url(../images/ico-location.png) left center no-repeat;
+        }
+        .phone {
+            margin: .4rem 0;
+            background: url(../images/ico-phone.png) left center no-repeat;
+            padding-left: 1rem;
+            display: block;
+            margin-left: 0;
+        }
+        .email {
+            @extend .phone;
+            background: url(../images/ico-email.png) left center no-repeat;
+            
+            padding-left: 1.3rem;
+            a {
+                color: #999;
+            }
+        }
+        @media (min-width: 34em) {
+            .phone, .email {
+                margin: 0;
+                display: inline-block; 
+                
+                margin-left: 1.8rem;
+            }
+             
+        }
+        @media (min-width: 48em) {
+            .phone, .email {                
+                margin-left: .3rem;
+            }
+             
+        }
+        @media (min-width: 80em) {
+            .phone, .email {              
+                margin-left: 1.8rem;
+            }
+             
+        }
+    }
+}

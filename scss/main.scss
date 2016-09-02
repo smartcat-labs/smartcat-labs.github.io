@@ -1,13 +1,13 @@
 @import "bootstrap/bootstrap";
-
 @font-face {
-	font-family: 'MyriadPro-Regular';
-	src: url('../fonts/MyriadPro-Regular.eot');
-	src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+//@include bordering();
 header {
     background: url(../images/header-bgr.jpg) top center no-repeat;
     width: 100%;
@@ -35,33 +35,92 @@ main {
         margin-bottom: 3.75rem;
         color: #7d7d7d;
     }
-    .project-box {
-        padding: 1.563rem 1.438rem;
-        border: 1px solid #ccc;
-        margin-right: -1px;
-        margin-top: -1px;
-        font-weight: 400;
-        padding-bottom: 3.75rem;
-        time {
-            display: block;
-            font-size: .85rem;
-            color: #00a1e4;
-            margin-bottom: 3.563rem;
+    .projects-wrapper {
+        
+        margin-bottom: 0;
+        margin-left: 0;
+        
+
+        
+        
+        
+        @media (min-width: 992px) {
+            width: 100%;
+            height: 100%;
+//            display: table;
+            box-sizing: border-box;
         }
-        p {
-            font-size: .85rem;
-            margin: .6875rem 0;
+        .project-box {
+            
+            
+            
+            border: 1px solid #ccc;
+            
+//            height: 400px;
+            
+            
+            
+            
+            padding: 1.563rem 1.438rem;
+            margin-right: -1px;
+            margin-top: -1px;
+            font-weight: 400;
+            padding-bottom: 3.75rem;
+//            box-shadow: inset 0 0 0 1px #ccc;
+            @media (min-width: 992px) {
+//                display: table-cell;
+//                float: none;
+            }
+            a {
+                text-decoration: none;
+                display: block;
+                time {        
+                    display: block;
+                    font-size: .85rem;
+                    color: #00a1e4;
+                    margin-bottom: 3.563rem;
+                }
+                h2 {
+                    color: #373a3c;
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                    margin: .6875rem 0;
+                }
+            }
         }
-    }
-    .project-box:hover {
-        background-color: #00a1e4;
-        transition: all .4s ease-in-out;
-        cursor: pointer;
-        & time {
-            color: #fff;
+        .project-box:not(:last-child),
+        .project-box:not(:first-child) {
+            @media (min-width: 992px) {
+//                border-bottom: $border;
+//                border-top: $border;
+//                box-shadow: none;
+            }
         }
-        & p {
-            color: #fff;
+        .project-box:first-child {
+            @media (min-width: 992px) {
+//                box-shadow: none;
+//                border-left: $border;
+//                border-right: $border;
+            }
+        }
+        .project-box:last-child {
+            @media (min-width: 992px) {
+//                border: none;
+//                box-shadow: inset 0 0 0 1px #ccc;
+            }
+        }
+        .project-box:hover {
+            background-color: #00a1e4;
+            transition: all .4s ease-in-out;
+            cursor: pointer;
+            & time {
+                color: #fff;
+            }
+            & p {
+                color: #fff;
+            }
         }
     }
 }
@@ -74,8 +133,8 @@ footer {
     color: #999;
     vertical-align: middle;
     .container-fluid {
-        @media (min-width:90em) {
-            padding: 0 10% ;
+        @media (min-width: 90em) {
+            padding: 0 10%;
         }
     }
     p {
@@ -92,9 +151,7 @@ footer {
     img {
         display: inline-block;
         margin-right: .2rem;
-        @media (min-width: 60em) {
-            
-        }
+        @media (min-width: 992px) {}
     }
     .contact {
         .location {
@@ -111,32 +168,30 @@ footer {
         .email {
             @extend .phone;
             background: url(../images/ico-email.png) left center no-repeat;
-            
             padding-left: 1.3rem;
             a {
                 color: #999;
             }
         }
         @media (min-width: 34em) {
-            .phone, .email {
+            .phone,
+            .email {
                 margin: 0;
-                display: inline-block; 
-                
+                display: inline-block;
                 margin-left: 1.8rem;
             }
-             
         }
         @media (min-width: 48em) {
-            .phone, .email {                
+            .phone,
+            .email {
                 margin-left: .3rem;
             }
-             
         }
         @media (min-width: 80em) {
-            .phone, .email {              
+            .phone,
+            .email {
                 margin-left: 1.8rem;
             }
-             
         }
     }
 }

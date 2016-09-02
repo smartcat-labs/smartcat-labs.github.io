@@ -2,3 +2,37 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+
+$border: 1px solid #ccc;
+@mixin bordering() {
+
+    .border-r {
+        border-right: $border;
+    }
+
+    .border-l {
+        border-left: $border;
+    }
+    .border-t {
+        border-top: $border;
+    }
+    .border-b {
+        border-bottom: $border;
+    }
+    .no-border-r {
+        border-right: none;
+    }
+    .no-border-l {
+        border-left: none;
+    }
+    .no-border-t {
+        border-top: none;
+    }
+    .no-border-b {
+        border-bottom: none;
+    }
+    .border-all {
+        border: $border;
+    }
+}
